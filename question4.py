@@ -1,4 +1,6 @@
+#Heather Mataruse
 
+#this the function for calcualting the super digits
 def superDigits(n,k):
     s = digsum(n)
     return sup_digit(str(int(s)*k))
@@ -8,7 +10,7 @@ def sup_digit(n):
         return n
     else:
         return sup_digit( digsum(n) )
-
+#I did a separate function which will find the sum of the numbers 
 def digsum(n):
     return str(sum((int(i) for i in list(n))))
 

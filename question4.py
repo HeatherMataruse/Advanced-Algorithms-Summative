@@ -1,16 +1,16 @@
 
-def superDigits(x,k):
-    s = digsum(x)
+def superDigits(n,k):
+    s = digsum(n)
     return sup_digit(str(int(s)*k))
 
-def sup_digit(x):
-    if len(x) <= 1:
-        return x
+def sup_digit(n):
+    if len(n) <= 1:
+        return n
     else:
-        return sup_digit( digsum(x) )
+        return sup_digit( digsum(n) )
 
-def digsum(x):
-    return str(sum((int(i) for i in list(x))))
+def digsum(n):
+    return str(sum((int(i) for i in list(n))))
 
 #here are the different test cases
 n = '9875'

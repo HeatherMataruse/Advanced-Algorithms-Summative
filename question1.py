@@ -13,8 +13,8 @@ def sum_of_n_numbers(n):
     sum_of_numbers = 0
     
 #here we start by counting from first number 
-    for numbers in range(1,n+1):
-        sum_of_numbers += numbers
+    for i in range(1,n+1):
+        sum_of_numbers += i
         
     # here we return the sum of the n numbers
     return sum_of_numbers
@@ -22,10 +22,10 @@ def sum_of_n_numbers(n):
 #this is the function that is already in python that I am calling 
 #to calculate the running time
 import time
-start = time.process_time()
+tym = time.process_time()
 
 #here is where i show the output for putting the different input values
-print("when input  is 10. The output is "+ str(sum_of_n_numbers(10)) + ' || Execution time: ' + str(time.process_time() - start)+"seconds")
-print("when input  is 1000. The output is "+ str(sum_of_n_numbers(10000)) + ' || Execution time: ' + str(time.process_time() - start)+"seconds")
-print("when input  is 1000000. The output is "+ str(sum_of_n_numbers(1000000)) + ' || Execution time: ' + str(time.process_time() - start)+"seconds")
-print("when input  is 1000000000. The output is: "+ str(sum_of_n_numbers(1000000000)) + ' || Execution time: ' + str(time.process_time() - start)+"seconds")
+print("when input  is 10. The output is "+ str(sum_of_n_numbers(10)) + ' || Execution time: ' + str(time.process_time() - tym )+"seconds")
+print("when input  is 1000. The output is "+ str(sum_of_n_numbers(10000)) + ' || Execution time: ' + str(time.process_time() - tym )+"seconds")
+print("when input  is 1000000. The output is "+ str(sum_of_n_numbers(1000000)) + ' || Execution time: ' + str(time.process_time() - tym)+"seconds")
+print("when input  is 1000000000. The output is: "+ str(sum_of_n_numbers(1000000000)) + ' || Execution time: ' + str(time.process_time() - tym)+"seconds")

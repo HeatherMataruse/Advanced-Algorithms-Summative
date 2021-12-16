@@ -23,6 +23,4 @@ n = '148'
 k = 3
 print("n = "+ str(n) +', k = '+ str(k) + ', concatenated value = ' + str(n*k) + "superdigit is   " + str(superDigits(n,k)))
 
-n = '56345'
-k = 6
-print("n = "+ str(n) +', k = '+ str(k) + ', concatenated value = ' + str(n*k) + " superdigit is " + str(superDigits(n,k)))
+

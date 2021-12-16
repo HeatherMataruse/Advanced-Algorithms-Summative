@@ -1,57 +1,57 @@
 #by Heather Mataruse
 
+my_key =3
+plain_text = 'Plain text'
 
-text = 'Plain text'
-key = 3
-def encryption(text,key):
-    encrypted_message = ""
-    start = 0
-    while start < key:
-        for j in range(start,len(text),key):
-            encrypted_message += text[j]
-        start += 1
+def encrypted_text(plain_text,my_key):
+    encryptedtext = ""
+    counter = 0
+    while start < my_key:
+        for i in range(counter,len(plain_text),my_key):
+            encryptedtext += plain_text[i]
+        counter += 1
 
-    return encrypted_message
+    return encryptedtext
 
-encrypted = encryption(text,key)
+encrypted = encrypted_text(plain_text,my_key)
 
 
 # this if the functin that will handle the decryption
-def decryption(encrypted,key):
-    a = 0
-    decrypted_message = ""
+def decrypted_text(encrypted,my_key):
+    counter= 0
+    decryptedtext = ""
     #here is where i checked for the modulus 
-    if len(encrypted) % 2 == 0 and key % 2 == 0: 
+    if len(encrypted) % 2 == 0 and my_key % 2 == 0: 
         # here i did floor division 
-        b = len(encrypted)//key 
+        x = len(encrypted)//my_key
         
-        while a < b:
+        while counter < x:
             
             #here I looped to check the length of the text 
-            for i in range(a,len(encrypted),b):
-                decrypted_message += encrypted[i]
-            a+=1 
-    if len(encrypted) % 2 == 0 and key % 2 != 0:
+            for i in range(counter,len(encrypted),x):
+                 decryptedtext += encrypted[i]
+            counter+=1 
+    if len(encrypted) % 2 == 0 and my_key % 2 != 0:
         # here i did floor division 
-        b = len(encrypted)//key 
+        x = len(encrypted)//my_key 
         
-        while a < b:
-            b += 1
-            decrypted_message += encrypted[a] 
+        while counter < x:
+            x += 1
+             decryptedtext += encrypted[counter] 
 
-            for i in range(a,len(encrypted)):
-                c = i + b 
-                decrypted_message += encrypted[c]
-                decrypted_message += encrypted[c+key]
+            for i in range(counter,len(encrypted)):
+                t = i + x 
+                 decryptedtext += encrypted[t]
+                 decryptedtext += encrypted[t+my_key
                 break
             # here i did floor division     
-            b = len(encrypted)//key 
-            a+=1 
-        decrypted_message+= encrypted[b]
+            x = len(encrypted)//my_key
+            counter+=1 
+         decryptedtext+= encrypted[x]
 
-    return decrypted_message
-decrypted = decryption(encrypted,key)
+    return  decryptedtext
+decrypted = decrypted_text(encrypted,my_key)
 
-print("Plain text : " + text)
+print("Plain text : " + plain_text)
 print("Encrypted text: "+ encrypted)
 print("Decryption text: "+ decrypted)
